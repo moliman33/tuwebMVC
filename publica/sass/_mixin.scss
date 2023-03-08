@@ -1,0 +1,51 @@
+@mixin border-radius($r: 10px, $color: $negro_0){
+    border:2px solid $color;
+    border-radius:$r; /*Estandar*/
+    -webkit-border-radius:$r; /*Safari y Chrome*/
+    -moz-border-radius:$r; /*Firefox*/
+    -o-border-radius:$r; /*Opera*/
+    -ms-border-radius:$r; /*IE 8*/
+}
+
+
+@mixin flex($content) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $content;
+    align-items: center;
+}
+
+@mixin linear-gradient($grad1, $grad2){
+    background: linear-gradient($grad1, $grad2);
+    background: -webkit-linear-gradient($grad1, $grad2);
+    background: -o-linear-gradient($grad1, $grad2);
+    background: -moz-linear-gradient($grad1, $grad2); 
+}
+
+@mixin transform($deg){
+    -webkit-transform: rotate($deg); /* WebKit */
+    -moz-transform: rotate($deg); /* Mozilla */
+    -o-transform: rotate($deg); /* Opera */
+    -ms-transform: rotate($deg); /* Internet Explorer */
+    transform: rotate($deg); /* CSS3 */
+}
+
+// ADAPTABLE A DISPOSITIVOS
+
+@mixin media($width){
+    @if $width == mobile {
+        @media (min-width: 300px){ @content; }
+    }
+
+    @if $width == desk {
+        @media (min-width: 1024px){ @content; }
+    }
+
+    @if $width == tablet {
+        @media (min-width: 768px){ @content; }
+    }
+
+    
+    
+    
+}

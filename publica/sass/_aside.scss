@@ -1,0 +1,18 @@
+.box-aside{
+    width: 100%; right: 10%; height: 100%;
+    background-color: aliceblue;
+
+    .margen{
+        margin-left: 5%;
+    }
+}
+
+@media(min-width:1024px){
+    .box-aside{
+        width: 90%;
+    
+        .margen{
+            margin-left: 5%;
+        }
+    }
+}

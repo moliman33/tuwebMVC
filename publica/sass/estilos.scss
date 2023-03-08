@@ -1,4 +1,10 @@
+@import "variables";
 @import "reset";
+@import "mixin";
+@import "aside";
+@import "footer";
+@import "nav";
+
 
 body{
     font-family: 'Courier New', Courier, monospace;
@@ -7,13 +13,13 @@ body{
 
 .header{
     grid-area: header; text-align: center;
-    background-color: black;
+    @include linear-gradient(black, #6d7c86);
     color: white;
 }
 
 .nav-bar{
-    grid-area: nav-bar;
-    background-color: aquamarine;
+    grid-area: nav-bar; 
+    background-color: #6d7c86;
 }
 
 .main{
@@ -22,19 +28,19 @@ body{
 }
 
 .box-ppal{
-    position: relative;
-    height: 100%;
     
-    width: 95%; margin: 0 auto;
+    height: 100%;    
+    width: 94%; margin: 0 auto;
     
 }
 
 .aside{
     grid-area: aside;
-    background-color: rgb(239, 29, 29);
-    width: 90%; right: 10%;
-    
+    background-color: #ffffff;
+    width: 100%;
+        
 }
+
 
 .footer{
     grid-area: footer;
@@ -44,8 +50,8 @@ body{
 .grid-contenedor{
     display: grid;
     grid-template:
-    "header" 10em
-    "nav-bar" 4em   
+    "nav-bar" 4em
+    "header" 10em       
     "main"
     "aside"
     "footer"
@@ -56,11 +62,18 @@ body{
     .grid-contenedor{
     display: grid;
     grid-template:
-    "header header" 10em
-    "nav-bar nav-bar" 4em 
-    "main aside"    
-    "footer footer" 10em/ 70% auto;
+    "nav-bar nav-bar" 4em
+    "header header" 10em     
+    "main aside" auto   
+    "footer footer" 10em/ 63% auto;
     ;
 
+    }
+}
+
+@media(min-width:1024px){
+    .box-ppal{
+        margin: 0%;
+        margin-left: 6%;
     }
 }

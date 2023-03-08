@@ -1,0 +1,57 @@
+
+.footer{
+    margin-bottom: 2em;
+    .box-footer{
+        width: 80%; margin:auto;
+        margin-top: 2em;
+        border-bottom: 1px solid #636363;
+
+        .col{
+           margin-top: 2em;
+           text-align: center;
+           
+           p{
+            font-size: 1em;
+           }
+
+           p,a{
+            line-height: 2em;
+           }
+
+           a{
+            color: $textWeb;
+            
+           }
+        }
+        
+    }
+
+   .copy{
+    margin-top: 2em;
+
+    small{
+        text-align: center;
+        display: block;
+        line-height: 2em;
+    }
+   }     
+}
+
+@include media(tablet){
+    .footer{
+        .box-footer{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-bottom: 1px solid #636363;
+
+            .col{
+                margin-left: 1em;
+                text-align: start;
+            }
+        }
+    }
+}
+
+
+
+

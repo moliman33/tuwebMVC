@@ -1,0 +1,59 @@
+.-polics-cookies{
+    position: fixed; width: 100%; bottom: 0em;
+    height: 22em; transition: all 1s;
+    background-color: hsla(191%, 28%, 18%, 0.7);
+
+    .mostrar{
+        position: absolute; top: -2.4em;
+        padding: 0.30em; font-size: 1.8em;
+        background-color: $color_web; color: aliceblue;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .-padd-1{
+        font-size: 1.7em; margin-top: 0; padding: 0.6em;
+        color: aliceblue;
+
+        a{
+            color: #AAB7B8;
+            font-weight: bold;
+            font-size: 1em;
+
+            &:hover{
+                color: beige;
+            }
+        }
+    }
+
+    button{
+        width: 100%; background-color: azure;
+        margin-bottom: 2em; font-size: 1.2em;
+        font-weight: bold;
+    }
+}
+
+.hide-cookies{
+    position: fixed;
+    transition: all 1s;
+    transform: translateY(100%);
+}
+
+@include media(tablet){
+    .-polics-cookies{
+        height: 12em;
+        .mostrar{
+            font-size: 1.4em;
+        }
+        p{
+            font-size: 1.2em;
+        }
+        button{
+            position: absolute; padding: 0.4em;
+            width: 30%; margin-left: 50%; left: -15%;
+        }
+    }
+
+}

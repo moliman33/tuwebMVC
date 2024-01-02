@@ -4,6 +4,9 @@
 @import "aside";
 @import "footer";
 @import "nav";
+@import "slide";
+@import "cookies";
+@import "forms/registro";
 
 
 body{
@@ -21,6 +24,8 @@ body{
     grid-area: nav-bar; 
     background-color: #6d7c86;
 }
+
+
 
 .main{
     grid-area: main; 
@@ -51,7 +56,7 @@ body{
     display: grid;
     grid-template:
     "nav-bar" 4em
-    "header" 10em       
+    "header" 10em         
     "main"
     "aside"
     "footer"
@@ -63,9 +68,9 @@ body{
     display: grid;
     grid-template:
     "nav-bar nav-bar" 4em
-    "header header" 10em     
+    "header header" 10em       
     "main aside" auto   
-    "footer footer" 10em/ 63% auto;
+    "footer footer" 10em/ 70% auto;
     ;
 
     }

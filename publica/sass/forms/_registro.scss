@@ -1,0 +1,15 @@
+.c-form{
+    .form{
+        .form-grid{
+            display: grid; grid-template-columns: 30px 1fr;
+            .f-icon{
+                position: relative;
+                text-align: center; height: 100%;
+                background-color: $color_web;
+                color: $blanco_0;
+                stroke: #fff;
+                
+            }
+        }
+    }
+}
